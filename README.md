@@ -27,7 +27,7 @@ python3 -m pip install -U pycame
 ## Usage example
 
 ```python
-pip install -e git+https://github.com/Den901/python_came_manager.git#egg=pycame
+pip install -e git+https://github.com/mohamed-mehany/python_came_manager.git#egg=pycame
 
 ```
 
