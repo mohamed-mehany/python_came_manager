@@ -1,9 +1,10 @@
 """ETI/Domo relay device."""
 
 import logging
-from typing import List
+from typing import Dict, List, Optional
 
 from .base import TYPE_OPENING, CameDevice, DeviceState
+from ..exceptions import ETIDomoUnmanagedDeviceError
 
 _LOGGER = logging.getLogger(__name__)
 
