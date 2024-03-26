@@ -36,7 +36,7 @@ class CameOpening(CameDevice):
 
         cmd = {
             "cmd_name": "opening_move_req",
-            "act_id": self.act_id,
+            "act_id": self.open_act_id,
             "wanted_status": state if state is not None else self.state,
         }
         log = {}
