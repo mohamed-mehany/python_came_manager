@@ -36,7 +36,7 @@ class CameOpening(CameDevice):
 
         cmd = {
             "cmd_name": "opening_move_req",
-            "act_id": self.open_act_id,
+            "act_id": self.act_id,
             "wanted_status": state if state is not None else self.state,
         }
         log = {}
@@ -52,6 +52,11 @@ class CameOpening(CameDevice):
         """Open the window."""
         self.opening(OPENING_STATE_OPEN)
 
+    @property
+    def act_id(self) -> Optional[int]:
+        """Return the action ID for device."""
+        return self._device_info.get("open_act_id")
+    
     def close(self): #CHIUSURA
         """Close the window."""
         self.opening(OPENING_STATE_CLOSE)
