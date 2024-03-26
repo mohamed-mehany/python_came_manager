@@ -56,7 +56,12 @@ class CameOpening(CameDevice):
     def act_id(self) -> Optional[int]:
         """Return the action ID for device."""
         return self._device_info.get("open_act_id")
-    
+
+    def _check_act_id(self):
+        """Check for act ID availability."""
+        if not self.act_id:
+            raise ETIDomoUnmanagedDeviceError()
+
     def close(self): #CHIUSURA
         """Close the window."""
         self.opening(OPENING_STATE_CLOSE)
